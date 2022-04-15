@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sounds/507203__baltiyar13__game-over.mp3" type="AudioStream" id=1]
+[ext_resource path="res://screen/GameOverScreen.gd" type="Script" id=2]
+[ext_resource path="res://thaleah_48.tres" type="DynamicFont" id=3]
+
+[node name="GameOverScreen" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 129.0
+margin_top = 209.0
+margin_right = 336.0
+margin_bottom = 253.0
+custom_fonts/font = ExtResource( 3 )
+text = "Game Over"
+
+[node name="GameOverSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )

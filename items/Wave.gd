@@ -13,14 +13,14 @@ func _process(delta):
 func _ready() -> void:
 	match(self.wave_color):
 		Globals.COLORS.YELLOW:
-			self.sprite.frame = 0
+			self.sprite.frame = 4
 		Globals.COLORS.GREEN:
-			self.sprite.frame = 3
+			self.sprite.frame = 6
 		Globals.COLORS.RED:
-			self.sprite.frame = 1
+			self.sprite.frame = 2
 			self.rotation_degrees = 90
 		Globals.COLORS.BLUE:
-			self.sprite.frame = 2
+			self.sprite.frame = 10
 			self.rotation_degrees = 90
 
 
@@ -41,7 +41,7 @@ func _on_Wave_body_entered(body):
 		if body.current_color == self.wave_color:
 			print('match')
 		else:
-			print('kill')
+			body.die()
 
 
 func _on_Wave_area_entered(area):

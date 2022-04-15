@@ -13,6 +13,8 @@ enum COLORS {
 	GREEN
 }
 
+const GAMEOVER_SCREEN : String = "res://screen/GameOverScreen.tscn"
+
 const POSITIONS : Dictionary = {
 	1: Vector2(239, -12),
 	2: Vector2(499, 238),

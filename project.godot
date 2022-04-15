@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Hue Wave"
-run/main_scene="res://Game.tscn"
+run/main_scene="res://kitargo_splash/kitargo_splash.tscn"
 config/icon="res://icon.png"
 
 [autoload]

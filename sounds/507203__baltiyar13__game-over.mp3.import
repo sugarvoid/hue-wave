@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/507203__baltiyar13__game-over.mp3-00de842a930494d555c061436e0f3477.mp3str"
+
+[deps]
+
+source_file="res://sounds/507203__baltiyar13__game-over.mp3"
+dest_files=[ "res://.import/507203__baltiyar13__game-over.mp3-00de842a930494d555c061436e0f3477.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

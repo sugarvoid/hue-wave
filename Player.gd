@@ -34,7 +34,7 @@ func get_color_input():
 		self.current_color = Globals.COLORS.WHITE
 
 func _increase_score() -> void:
-	$AudioStreamPlayer2D.play()
+	$Pickup.play()
 	Globals.player_score += 1
 	print(Globals.player_score)
 
