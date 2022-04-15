@@ -5,7 +5,7 @@
 [ext_resource path="res://sound/478647__phenala__coin-pickup.mp3" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 15, 15 )
+extents = Vector2( 16, 16 )
 
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
