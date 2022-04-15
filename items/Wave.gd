@@ -1,10 +1,12 @@
 extends Area2D
 
 
+onready var sprite : Sprite = get_node("Sprite")
+
+
 var wave_color : int
 var speed : int = 150
 
-onready var sprite : Sprite = get_node("Sprite")
 
 func _process(delta):
 	move(delta)

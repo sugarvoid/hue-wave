@@ -5,6 +5,13 @@ signal on_player_death()
 
 onready var screen_size = get_viewport().size
 
+enum GameState {
+	START_SCREEN,
+	GAMEPLAY,
+	GAMEOVER,
+	PAUSE
+}
+
 enum COLORS {
 	WHITE,
 	YELLOW,
