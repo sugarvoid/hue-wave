@@ -5,6 +5,7 @@ onready var lbl_label: Label = get_node("Score")
 
 func _ready():
 	Globals.connect("on_player_death", self, "_player_death")
+	$BgMusic.play()
 
 
 func _process(delta):
@@ -12,6 +13,7 @@ func _process(delta):
 
 
 func _player_death():
+	$BgMusic.stop()
 	$PlayerDeath.play()
 
 

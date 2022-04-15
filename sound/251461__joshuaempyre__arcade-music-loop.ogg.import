@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/251461__joshuaempyre__arcade-music-loop.ogg-0abbaf223cd7e223a35b46eb4f9c0103.oggstr"
+
+[deps]
+
+source_file="res://sound/251461__joshuaempyre__arcade-music-loop.ogg"
+dest_files=[ "res://.import/251461__joshuaempyre__arcade-music-loop.ogg-0abbaf223cd7e223a35b46eb4f9c0103.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
