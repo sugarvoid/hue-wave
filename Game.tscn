@@ -35,3 +35,10 @@ position = Vector2( 353, 174 )
 
 [node name="Wave" parent="." instance=ExtResource( 4 )]
 position = Vector2( 239, -12 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 412.0
+margin_top = 13.0
+margin_right = 467.0
+margin_bottom = 54.0
+text = "000"
