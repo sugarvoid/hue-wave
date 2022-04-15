@@ -1,7 +1,7 @@
 extends Node
 
 onready var timer: Timer = get_node("Timer")
-onready var p_Wave = preload("res://items/Wave.tscn")
+onready var p_Wave = preload("res://wave/Wave.tscn")
 
 
 var next_spawn_time: float = 5.0

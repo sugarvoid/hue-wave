@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sounds/507203__baltiyar13__game-over.mp3" type="AudioStream" id=1]
+[ext_resource path="res://sound/507203__baltiyar13__game-over.mp3" type="AudioStream" id=1]
 [ext_resource path="res://screen/GameOverScreen.gd" type="Script" id=2]
 [ext_resource path="res://thaleah_48.tres" type="DynamicFont" id=3]
 

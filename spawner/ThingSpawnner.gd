@@ -1,7 +1,7 @@
 extends Node
 
 onready var screen_size = get_viewport().size
-onready var p_Thing = preload("res://items/Thing.tscn")
+onready var p_Thing = preload("res://thing/Thing.tscn")
 
 var rand = RandomNumberGenerator.new()
 

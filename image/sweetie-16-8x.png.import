@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/player_t.png-46b9755bf5426d8487e4a4a560004545.stex"
+path="res://.import/sweetie-16-8x.png-aa90d74ddf646893856ebb76525ea798.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://player/player_t.png"
-dest_files=[ "res://.import/player_t.png-46b9755bf5426d8487e4a4a560004545.stex" ]
+source_file="res://image/sweetie-16-8x.png"
+dest_files=[ "res://.import/sweetie-16-8x.png-aa90d74ddf646893856ebb76525ea798.stex" ]
 
 [params]
 
