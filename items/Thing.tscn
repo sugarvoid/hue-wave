@@ -18,4 +18,7 @@ texture = ExtResource( 1 )
 hframes = 16
 frame = 6
 
+[node name="LifeTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_Thing_body_entered"]
+[connection signal="timeout" from="LifeTimer" to="." method="_on_LifeTimer_timeout"]

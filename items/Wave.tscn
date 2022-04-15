@@ -7,6 +7,7 @@
 extents = Vector2( 242.75, 10 )
 
 [node name="Wave" type="Area2D"]
+collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -15,8 +16,14 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 48.5, 1 )
 texture = ExtResource( 1 )
-region_enabled = true
+hframes = 4
+frame = 1
 region_rect = Rect2( 0, 0, 10, 10 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 3.8147e-06, 4.76837e-07 )
+scale = Vector2( 8.2, 0.5 )
 
 [connection signal="area_entered" from="." to="." method="_on_Wave_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Wave_body_entered"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

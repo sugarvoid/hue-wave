@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://items/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://items/Thing.tscn" type="PackedScene" id=3]
-[ext_resource path="res://items/Wave.tscn" type="PackedScene" id=4]
+[ext_resource path="res://WaveSpawnner.gd" type="Script" id=2]
+[ext_resource path="res://Game.gd" type="Script" id=3]
 [ext_resource path="res://sweetie-16-8x.png" type="Texture" id=5]
+[ext_resource path="res://ThingSpawnner.gd" type="Script" id=6]
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 240, 241 )
@@ -18,27 +20,26 @@ region_rect = Rect2( 0, 0, 8, 8 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 297, 152 )
 
-[node name="Thing" parent="." instance=ExtResource( 3 )]
-position = Vector2( 155, 72 )
-
-[node name="Thing2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 115, 116 )
-
-[node name="Thing3" parent="." instance=ExtResource( 3 )]
-position = Vector2( 232, 142 )
-
-[node name="Thing4" parent="." instance=ExtResource( 3 )]
-position = Vector2( 56, 82 )
-
-[node name="Thing5" parent="." instance=ExtResource( 3 )]
-position = Vector2( 353, 174 )
-
-[node name="Wave" parent="." instance=ExtResource( 4 )]
-position = Vector2( 239, -12 )
-
-[node name="Label" type="Label" parent="."]
+[node name="Score" type="Label" parent="."]
 margin_left = 412.0
 margin_top = 13.0
 margin_right = 467.0
 margin_bottom = 54.0
 text = "000"
+
+[node name="WaveSpawnner" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Timer" type="Timer" parent="WaveSpawnner"]
+wait_time = 2.0
+autostart = true
+
+[node name="ThingSpawnner" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="ThingSpawnner"]
+wait_time = 3.0
+autostart = true
+
+[connection signal="timeout" from="WaveSpawnner/Timer" to="WaveSpawnner" method="_on_Timer_timeout"]
+[connection signal="timeout" from="ThingSpawnner/Timer" to="ThingSpawnner" method="_on_Timer_timeout"]

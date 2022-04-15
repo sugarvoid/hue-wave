@@ -1,31 +1,54 @@
 extends Area2D
 
-enum COLOR {
-	YELLOW,
-	RED,
-	BLUE,
-	GREEN
-}
 
-var color : int 
-var speed : int = 70
+var wave_color : int
+var speed : int = 150
+
+onready var sprite : Sprite = get_node("Sprite")
 
 func _process(delta):
-	self.position.y += speed * delta
+	move(delta)
+	
 
-func move() -> void:
-	self.position.y += 20
+func _ready() -> void:
+	match(self.wave_color):
+		Globals.COLORS.YELLOW:
+			self.sprite.frame = 0
+		Globals.COLORS.GREEN:
+			self.sprite.frame = 3
+		Globals.COLORS.RED:
+			self.sprite.frame = 1
+			self.rotation_degrees = 90
+		Globals.COLORS.BLUE:
+			self.sprite.frame = 2
+			self.rotation_degrees = 90
+
+
+func move(delta) -> void:
+	match(self.wave_color):
+		Globals.COLORS.YELLOW:
+			self.position.y += speed * delta
+		Globals.COLORS.GREEN:
+			self.position.y -= speed * delta
+		Globals.COLORS.RED:
+			self.position.x -= speed * delta
+		Globals.COLORS.BLUE:
+			self.position.x += speed * delta
 
 
 func _on_Wave_body_entered(body):
-	print(body)
-	#check player color
-	#if same ignore
-	pass # Replace with function body.
+	if body.get_class() == "Player":
+		if body.current_color == self.wave_color:
+			print('match')
+		else:
+			print('kill')
 
 
 func _on_Wave_area_entered(area):
-	print(area)
 	#check color
 	#if same destroy
-	pass # Replace with function body.
+	pass 
+
+
+func _on_VisibilityNotifier2D_screen_exited():
+	self.queue_free()
