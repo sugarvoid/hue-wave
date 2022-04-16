@@ -28,6 +28,7 @@ scale = Vector2( 8.2, 0.5 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -7.73
 
 [connection signal="area_entered" from="." to="." method="_on_Wave_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_Wave_body_entered"]
