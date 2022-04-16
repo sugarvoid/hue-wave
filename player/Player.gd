@@ -36,7 +36,6 @@ func get_color_input():
 func _increase_score() -> void:
 	$Pickup.play()
 	Globals.player_score += 1
-	print(Globals.player_score)
 
 func die() -> void:
 	Globals.emit_signal("on_player_death")

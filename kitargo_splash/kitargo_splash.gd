@@ -23,5 +23,4 @@ func _on_Pause_timeout() -> void:
 	var _x = get_tree().change_scene(MAIN_MENU_SCENE)
 
 func _on_AudioStreamPlayer_finished():
-	print('done')
 	var _x = get_tree().change_scene(MAIN_MENU_SCENE)
