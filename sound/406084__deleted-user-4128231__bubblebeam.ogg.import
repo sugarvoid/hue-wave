@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/406084__deleted-user-4128231__bubblebeam.ogg-52353bd805d1d9d0baa4cde7dcc65f19.oggstr"
+
+[deps]
+
+source_file="res://sound/406084__deleted-user-4128231__bubblebeam.ogg"
+dest_files=[ "res://.import/406084__deleted-user-4128231__bubblebeam.ogg-52353bd805d1d9d0baa4cde7dcc65f19.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

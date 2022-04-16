@@ -5,7 +5,7 @@ onready var sprite : Sprite = get_node("Sprite")
 
 
 var wave_color : int
-var speed : int = 150
+var speed : int = 200
 
 
 func _process(delta):
@@ -41,7 +41,7 @@ func move(delta) -> void:
 func _on_Wave_body_entered(body):
 	if body.get_class() == "Player":
 		if body.current_color == self.wave_color:
-			print('match')
+			$AudioStreamPlayer.play()
 		else:
 			body.die()
 
