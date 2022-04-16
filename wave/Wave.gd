@@ -5,7 +5,7 @@ onready var sprite : Sprite = get_node("Sprite")
 
 
 var wave_color : int
-var speed : int = 200
+var speed : int
 
 
 func _process(delta):
@@ -16,14 +16,18 @@ func _ready() -> void:
 	match(self.wave_color):
 		Globals.COLORS.YELLOW:
 			self.sprite.frame = 4
+			self.speed = 200
 		Globals.COLORS.GREEN:
 			self.sprite.frame = 6
+			self.speed = 350
 		Globals.COLORS.RED:
 			self.sprite.frame = 2
 			self.rotation_degrees = 90
+			self.speed = 280
 		Globals.COLORS.BLUE:
 			self.sprite.frame = 10
 			self.rotation_degrees = 90
+			self.speed = 500
 
 
 func move(delta) -> void:

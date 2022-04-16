@@ -13,7 +13,7 @@ func get_class() -> String:
 	return "Player"
 
 func _ready() -> void:
-	Globals.connect("on_coin_pickup", self, "_increase_score")
+	var _c = Globals.connect("on_coin_pickup", self, "_increase_score")
 
 # The code below updates the character's sprite to look in a specific direction.
 func get_color_input():
@@ -54,7 +54,7 @@ func get_input():
 	# Make sure diagonal movement isn't faster
 	velocity = velocity.normalized() * speed
 
-func _process(delta):
+func _process(_delta):
 	get_input()
 	get_color_input()
 	velocity = move_and_slide(velocity)
