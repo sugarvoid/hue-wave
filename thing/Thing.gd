@@ -7,7 +7,7 @@ func _ready():
 
 
 func _on_Thing_body_entered(body):
-	if body.get_class == "Player":
+	if body.get_class() == "Player":
 		queue_free()
 		Globals.emit_signal("on_coin_pickup")
 
