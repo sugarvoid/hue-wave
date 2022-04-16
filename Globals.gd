@@ -3,7 +3,7 @@ extends Node
 signal on_coin_pickup()
 signal on_player_death()
 
-onready var screen_size = get_viewport().size
+onready var screen_size = get_viewport().get_visible_rect().size
 
 enum GameState {
 	START_SCREEN,
